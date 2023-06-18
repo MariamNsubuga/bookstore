@@ -126,9 +126,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'book/static')]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 VENV_PATH = os.path.dirname(BASE_DIR)
-STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
+# STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
 
-#STATIC_ROOT = os.path.join(BASE_DIR, 'book/static')
+STATIC_ROOT = 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
