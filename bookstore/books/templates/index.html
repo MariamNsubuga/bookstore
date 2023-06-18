@@ -22,15 +22,18 @@
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
+      {% load static %}
       <div class="carousel-item active">
         {% load static %}
-        <img class="d-block w-100 " height="1000px" src="{% static 'Bookstore image04.jpg' %}" alt="First slide">
+        <img class="d-block w-100 " height="1000px" src= "{% static 'Bookstore image04.jpg' %}" alt="First slide">
      
       <div class="carousel-item">
-        <img class="d-block w-100 " height="1000px" src="{% static 'Bookstore image02.jpg' %}" alt="Second slide">
+        {% load static %}
+        <img class="d-block w-100 " height="1000px" src= "{% static 'Bookstore image02.jpg' %}" alt="Second slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100 " height="1000px" src="{% static 'Bookstore image01.jpg' %}" alt="Third slide">
+        {% load static %}
+        <img class="d-block w-100 " height="1000px" src= "{% static 'Bookstore image01.jpg' %}" alt="Third slide">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
