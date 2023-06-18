@@ -37,14 +37,17 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'books',
+    
      
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -120,15 +123,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_URL_DIRS = [
-#     BASE_DIR / "static",
-# ]
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'book/static')]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
-VENV_PATH = os.path.dirname(BASE_DIR)
-# STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
-
-STATIC_ROOT = 'static'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),] # new
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # new
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage' # new
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
