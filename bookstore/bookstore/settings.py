@@ -124,7 +124,7 @@ STATIC_URL = '/static/'
 #     BASE_DIR / "static",
 # ]
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 #STATIC_ROOT = os.path.join(BASE_DIR, 'book/static')
 
 # Default primary key field type
