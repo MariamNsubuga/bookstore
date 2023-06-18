@@ -23,3 +23,6 @@ urlpatterns = [
     path("request_books/", views.request_books, name="request_books"),   
     path("checkout/", views.checkout, name="checkout"),    
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
